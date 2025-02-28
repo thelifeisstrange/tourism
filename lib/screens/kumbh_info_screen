@@ -1,0 +1,149 @@
+
+
+import 'package:flutter/material.dart';
+
+class KumbhInfoScreen extends StatelessWidget {
+  const KumbhInfoScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 200,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                image: const DecorationImage(
+                  image: AssetImage('assets/kumbh_banner.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'About Kumbh Mela',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepOrange,
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Kumbh Mela is a major pilgrimage and festival in Hinduism. It is celebrated in a cycle of approximately 12 years, with the site of observance rotating between four riverbank pilgrimage sites: Prayagraj (Allahabad), Haridwar, Nashik, and Ujjain.',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Significance',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepOrange,
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'According to Hindu mythology, the Kumbh Mela is held at the four places where drops of immortality (amrit) fell to earth during the churning of the cosmic ocean. Bathing in these rivers during Kumbh is considered highly auspicious and is said to cleanse sins, paving the way for salvation.',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Upcoming Kumbh Mela in Prayagraj',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepOrange,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Card(
+              elevation: 3,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Dates and Schedule',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    ListTile(
+                      leading: Icon(Icons.calendar_today, color: Colors.deepOrange),
+                      title: Text('Main Bathing Dates'),
+                      subtitle: Text('Check official announcements for exact dates'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.location_on, color: Colors.deepOrange),
+                      title: Text('Venue'),
+                      subtitle: Text('Sangam, Prayagraj (Allahabad), Uttar Pradesh'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.people, color: Colors.deepOrange),
+                      title: Text('Expected Attendance'),
+                      subtitle: Text('Millions of devotees from around the world'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Cultural Importance',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepOrange,
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Kumbh Mela is not just a religious gathering but also a celebration of traditional Indian culture and spirituality. It attracts not only pilgrims but also tourists, researchers, photographers, and spiritual seekers from across the globe.',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.orange.shade50,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Things to Experience',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.deepOrange,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text('• Sacred bathing at the Sangam'),
+                  Text('• Spiritual discourses and bhajans'),
+                  Text('• Akharas (sects) of sadhus and their rituals'),
+                  Text('• Cultural performances'),
+                  Text('• Traditional food and handicrafts'),
+                ],
+              ),
+            ),
+            const SizedBox(height: 30),
+          ],
+        ),
+      ),
+    );
+  }
+}
